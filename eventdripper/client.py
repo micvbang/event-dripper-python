@@ -12,7 +12,7 @@ class Client:
         payload = {
             'entity_id': entity_id,
             'event_name': event_name,
-            'data': base64.b64encode(data.encode('utf8')),  # TODO: verify
+            'data': base64.b64encode(data.encode('utf8')).decode('utf8'),
         }
 
         headers = {
